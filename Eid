@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://r4---sn-npoe7ned.c.drive.google.com/videoplayback?expire=1596239909&ei=5XckX62XJ8STxwPFsruoCA&ip=37.111.220.227&cp=QVNOWENfWFlOSlhOOjZvSEtKMk5IWkM5M3R3NTVaUDVUakhrbGMwdms4WlVpNlZPbDdoLWtudTk&id=8cb30811796f921b&itag=18&source=webdrive&requiressl=yes&mh=-0&mm=32&mn=sn-npoe7ned&ms=su&mv=m&mvi=4&pl=24&sc=yes&ttl=transient&susc=dr&driveid=1N4IJvzQL6sCWmHnAX-Xlc1d4yQo3Jdx1&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=22.709&lmt=1596225505411442&mt=1596225378&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRQIgYfJrs6e2e7xlsfWDne7JcbGrjWYLgslmspdVOfXKuyQCIQDUBnMGfo0JpNV7wI0CyiUXKDEMwy8HH5VK5gng-B6sXw==&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRAIga3MTW4_cyFYh5iQgb5AeeZmDRh98F2XrhWZcSZRPDmYCIHFk9gEYibPBkW2JWOO-iz8_8zE7euNRd9pN8fSXA69E" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Eid gretings from Applee</h1>
+
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
